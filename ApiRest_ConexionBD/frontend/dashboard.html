@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <h1>
+        Bienvenido <span id="username"></span>
+    </h1>
+
+    <button onclick="cerrarSesion()">Cerrar Sesión</button>
+
+    <h2>Roles</h2>
+    <table id="tabla-roles">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Módulos</h2>
+    <table id="tabla-modulos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Usuarios</h2>
+    <table id="tabla-usuarios">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = JSON.parse(localStorage.getItem('user'));
+            if (!user) {
+                window.location.href = "login.html";
+            } else {
+                document.getElementById('username').textContent = user.nombre;
+            }
+
+            cargarRoles();
+            cargarUsuarios();
+            cargarModulos();
+        });
+
+        function cerrarSesion() {
+            localStorage.removeItem('user');
+            window.location.href = "login.html";
+        }
+
+        function cargarRoles() {
+            fetch('http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/usuarios') 
+                .then(response => response.json())
+                .then(data => {
+                    const tablaRoles = document.getElementById('tabla-roles').getElementsByTagName('tbody')[0];
+                    data.forEach(rol => {
+                        const row = tablaRoles.insertRow();
+                        row.innerHTML = `<td>${rol.id}</td><td>${rol.nombre}</td>`;
+                    });
+                })
+                .catch(error => console.error('Error al cargar los roles:', error));
+        }
+
+                
+        function cargarModulos() {
+            fetch('http://localhost/ApiRest_ConexionBD/backend/controllers/ModulosController.php/Modulo') 
+                .then(response => response.json())
+                .then(data => {
+                    const tablaRoles = document.getElementById('tabla-modulos').getElementsByTagName('tbody')[0];
+                    data.forEach(modulos => {
+                        const row = tablaRoles.insertRow();
+                        row.innerHTML = `<td>${modulos.id}</td><td>${modulos.nombre}</td>`;
+                    });
+                })
+                .catch(error => console.error('Error al cargar los roles:', error));
+        }
+
+        function cargarUsuarios() {
+            fetch('http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php/usuarios') 
+                .then(response => response.json())
+                .then(data => {
+                    const tablaUsuarios = document.getElementById('tabla-usuarios').getElementsByTagName('tbody')[0];
+                    data.forEach(usuario => {
+                        const row = tablaUsuarios.insertRow();
+                        row.innerHTML = `<td>${usuario.id}</td><td>${usuario.nombre}</td><td>${usuario.correo}</td>`;
+                    });
+                })
+                .catch(error => console.error('Error al cargar los usuarios:', error));
+        }
+    </script>
+
+</body>
+
+</html>
