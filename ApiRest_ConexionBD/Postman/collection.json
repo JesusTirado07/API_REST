@@ -1,0 +1,570 @@
+{
+	"info": {
+		"_postman_id": "3f397dc2-615f-4ab3-b926-5b92429cb5c3",
+		"name": "ExamenDifasa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24567306"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "GET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"UsuariosController.php",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"2222PruebaActualizado Juan\",\r\n  \"correo\": \"2222PruebaaActualizado@example.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"UsuariosController.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Carlos Gómez Actualizado\",\r\n  \"correo\": \"carlosupdated@example.com\",\r\n  \"password\": \"newpassword456\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php/usuarios?id=9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"UsuariosController.php",
+								"usuarios"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php/usuarios?id=9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"UsuariosController.php",
+								"usuarios"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php/usuarios?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"UsuariosController.php",
+								"usuarios"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"RolesController.php",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"SuperAdmin\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"RolesController.php",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Vendedores\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/roles?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"RolesController.php",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/roles?id=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"RolesController.php",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/roles?id=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"RolesController.php",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Modulos",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/ModulosController.php/Modulo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"ModulosController.php",
+								"Modulo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"pPUX/UI\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/ModulosController.php/modulo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"ModulosController.php",
+								"modulo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Actualizado-UX/UI\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/ModulosController.php/Modulo?id=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"ModulosController.php",
+								"Modulo"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/ModulosController.php/Modulo?id=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"ModulosController.php",
+								"Modulo"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/ModulosController.php/Modulo?id=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"ModulosController.php",
+								"Modulo"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AsignarRol",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"roles\": [1, 4,3] \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php/asignarRoles?usuario_id=13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"UsuariosController.php",
+								"asignarRoles"
+							],
+							"query": [
+								{
+									"key": "usuario_id",
+									"value": "13"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AsignarModulos",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modulos\": [1, 2, 3,5]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/asignarModulos?rol_id=8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"ApiRest_ConexionBD",
+								"backend",
+								"controllers",
+								"RolesController.php",
+								"asignarModulos"
+							],
+							"query": [
+								{
+									"key": "rol_id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
