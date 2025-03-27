@@ -1,0 +1,96 @@
+Usuarios
+
+  GET
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php/usuarios
+
+  POST
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php
+  Cuerpo:
+  {
+    "nombre": "Ejemplo Nombre",
+    "correo": "ejemplo@correo.com",
+    "password": "tu_contraseña"
+  }
+
+  PUT
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php/usuarios?id={id}
+  Cuerpo:
+  {
+    "nombre": "Nombre Actualizado",
+    "correo": "correoactualizado@correo.com",
+    "password": "nueva_contraseña"
+  }
+
+  DELETE
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php/usuarios?id={id}
+
+  GET ID
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php/usuarios?id={id}
+
+Roles
+
+  GET
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/roles
+
+  POST
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/roles
+
+  Cuerpo:
+  {
+    "nombre": "Ejemplo Rol"
+  }
+
+  PUT
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/roles?id={id}
+  Cuerpo:
+  {
+    "nombre": "Rol Actualizado"
+  }
+
+  DELETE
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/roles?id={id}
+
+  GET ID
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/roles?id={id}
+
+Modulos
+
+  GET
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/ModulosController.php/Modulo
+
+  POST
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/ModulosController.php/modulo
+  Cuerpo:
+  {
+    "nombre": "Ejemplo Módulo"
+  }
+
+  PUT
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/ModulosController.php/Modulo?id={id}
+  Cuerpo:
+  {
+    "nombre": "Módulo Actualizado"
+  }
+
+  DELETE
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/ModulosController.php/Modulo?id={id}
+  GET ID
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/ModulosController.php/Modulo?id={id}
+
+AsignarRol
+
+  POST
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/UsuariosController.php/asignarRoles?usuario_id={usuario_id}
+  Cuerpo:
+  {
+    "roles": [1, 2, 3]
+  }
+
+AsignarModulos
+
+  POST
+  URL: http://localhost/ApiRest_ConexionBD/backend/controllers/RolesController.php/asignarModulos?rol_id={rol_id}
+  Cuerpo:
+  {
+    "modulos": [1, 2, 3]
+  }
